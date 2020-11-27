@@ -1,0 +1,68 @@
+<mat-card>
+    <mat-card-content>
+
+      <h2>Cadastro</h2>
+
+    <mat-radio-group aria-labelledby="example-radio-group-label"  class="example-radio-group" [(ngModel)]="tipoCadastro">
+
+      <mat-radio-button value="contratante">Contratante</mat-radio-button>
+      <mat-radio-button value="contratado">Contratado</mat-radio-button>
+
+    </mat-radio-group>  
+
+    <br><br>
+
+    <div *ngIf="tipoCadastro == 'contratante'">
+
+      <form [formGroup]="cadastroContratante" (ngSubmit)="cadastrarContratante()">
+
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="E-mail" formControlName="email" required>
+          <mat-error>
+            Apresente um e-mail válido.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Crie uma senha" formControlName="password" required>
+          <mat-error>
+            Apresente uma senha.
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-raised-button [disabled]='!cadastroContratante.valid' class="aa">Cadastre</button>
+
+      </form>
+    </div>
+    
+    <div *ngIf="tipoCadastro == 'contratado'">
+
+      <form [formGroup]="cadastroContratado" (ngSubmit)="cadastrarContratado()">
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="E-mail" formControlName="email" required>
+          <mat-error>
+            Apresente um e-mail válido.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Crie uma senha" formControlName="password" required>
+          <mat-error>
+            Apresente uma senha.
+          </mat-error>
+        </mat-form-field>
+
+        <div *ngFor="let choice of checks; let i=index" class="col-md-2">
+        <label class="example-section">
+          <input type="checkbox" [value]="choice.value" (change)="onCheckChange($event)">
+          {{choice.description}}
+        </label>
+      </div>
+
+        <button mat-raised-button [disabled]='!cadastroContratado.valid' class="aa">Quero me tornar parceiro</button>
+
+      </form>
+    </div>
+
+    </mat-card-content>
+  </mat-card>

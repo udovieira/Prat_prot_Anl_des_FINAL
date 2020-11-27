@@ -1,0 +1,17 @@
+mat-card {
+    width: 80%;
+    padding: 2em;
+    margin: 2em auto;
+    text-align: center;
+    height: 100%;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+
+  .aa{
+    background-color: #e68a00; /* Black*/
+    color: #f1f1f1;
+  }
+  

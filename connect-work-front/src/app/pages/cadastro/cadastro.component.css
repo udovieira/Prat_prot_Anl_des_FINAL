@@ -1,0 +1,31 @@
+mat-card {
+    width: 80%;
+    padding: 2em;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+ 
+  
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+
+.aa{
+  background-color: #e68a00; /* Black*/
+  color: #f1f1f1;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 20px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}

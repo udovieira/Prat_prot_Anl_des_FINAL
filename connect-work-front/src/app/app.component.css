@@ -1,0 +1,27 @@
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 25%;
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #e68a00; /* Black*/
+  }
+
+  .aa{
+    background-color: #e68a00; /* Black*/
+    color: #f1f1f1;
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1em;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    background-color: #cc7a00;
+  }

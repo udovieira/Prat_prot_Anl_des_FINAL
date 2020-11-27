@@ -1,0 +1,27 @@
+<mat-card>
+  <div fxLayout="column" fxLayoutGap="1.5em" fxLayoutGap="1em">
+    <h2>Serviços elétricos</h2>
+
+   <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutGap="1em">
+      <input *ngFor="let servicoEletrico of servicosEletricos" type="button" class="button" value="{{servicoEletrico}}">
+    </div>
+
+    <h2>Serviços de Informática</h2>
+
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutGap="1em">
+      <input *ngFor="let servicoEletrico of servicosInformatica" [routerLink]="['/selecionar-contratado', servicoEletrico]" type="button" class="button" value="{{servicoEletrico}}">
+    </div>
+
+    <h2>Serviços Hidráulicos</h2>
+
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutGap="1em">
+      <input *ngFor="let servicoEletrico of servicosHidraluticos" type="button" class="button" value="{{servicoEletrico}}">
+    </div>
+
+    <h2>Pisos e revestimento</h2>
+    
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutGap="1em">
+      <input *ngFor="let servicoEletrico of pisosRevestimento" type="button" class="button" value="{{servicoEletrico}}">
+    </div>
+  </div>
+</mat-card>

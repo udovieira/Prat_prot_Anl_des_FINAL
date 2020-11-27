@@ -1,0 +1,25 @@
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav mode="over" class="sidenav">
+
+      <a  (click)="sidenav.close()" routerLink="/dashboard">Dashboard</a><br>
+      <a  (click)="sidenav.close()" routerLink="/login">Login</a><br>
+      <a  (click)="sidenav.close()" routerLink="/cadastro">Cadastro</a><br>
+      <a  (click)="sidenav.close()" routerLink="/catalogo">Catálogo</a><br>
+
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar class="aa">
+      <button mat-icon-button class="example-icon" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Connect Work</span>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

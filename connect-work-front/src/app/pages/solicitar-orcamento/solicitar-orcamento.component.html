@@ -1,0 +1,30 @@
+<mat-card>
+    <fieldset>
+        <legend>{{contratadoSelecionado.nome}}</legend>
+
+        <li>
+            <b> Serviços:</b> {{contratadoSelecionado.servicos}}
+        </li>
+
+        <li>
+            <b>Avaliação:</b> {{contratadoSelecionado.avaliacao}}
+        </li>
+
+        <li>
+            <b>Meses:</b> {{contratadoSelecionado.meses}}
+        </li>
+    </fieldset>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Descreva a obra</mat-label>
+        <input matInput>
+    </mat-form-field>
+
+</mat-card>

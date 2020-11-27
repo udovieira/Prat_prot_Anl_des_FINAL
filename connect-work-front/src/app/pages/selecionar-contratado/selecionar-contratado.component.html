@@ -1,0 +1,22 @@
+<mat-card>
+    <h1> Selecione um Contrado para {{servico}}</h1>
+
+    <fieldset *ngFor="let contratado of contratados">
+        <legend>{{contratado.nome}}</legend>
+
+        <li>
+            <b> Serviços:</b> {{contratado.servicos}}
+        </li>
+
+        <li>
+            <b>Avaliação:</b> {{contratado.avaliacao}}
+        </li>
+
+        <li>
+            <b>Meses:</b> {{contratado.meses}}
+        </li>
+
+        <button (click)="selecionaContratado(contratado)">Fazer Orçamento</button>
+    </fieldset>
+
+</mat-card>
